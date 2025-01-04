@@ -308,11 +308,77 @@ body {
   color: red;
 }
 
-@media(min-width:800px){
-  .app-container {
-    margin: 10px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+@media(min-width: 800px) {
+    .app-container {
+      margin: 20px; /* Adjusted margin to ensure it's not too wide */
+      min-height: 100vh; /* Ensures it takes up the full viewport height */
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .logo {
+      top: 20px; /* Adjusted to fit better on larger screens */
+      right: 40px;
+    }
+  
+    .logo h3 {
+      font-size: 26px; /* Increased font size for larger screens */
+      margin-top: 10px;
+    }
+  
+    .menu-toggle-button {
+      padding: 15px 25px; /* Increased padding for better appearance on larger screens */
+      font-size: 18px; /* Increased font size */
+    }
+  
+    .sliding-menu {
+      width: 300px; /* Increased width of the sliding menu for larger screens */
+    }
+  
+    .menu-title {
+      font-size: 24px; /* Increased font size */
+    }
+  
+    .menu-item {
+      font-size: 18px; /* Increased font size for larger screens */
+    }
+  
+    .search-title {
+      font-size: 20px; /* Larger font size */
+    }
+  
+    .search-input, .skill-input {
+      font-size: 16px; /* Larger font size for better visibility */
+    }
+  
+    .selected-skills-title {
+      font-size: 18px; /* Increased font size */
+    }
+  
+    .selected-skill-badge {
+      font-size: 16px; /* Increased font size */
+      padding: 8px 4px 8px 14px;
+    }
+  
+    .remove-skill-button {
+      font-size: 20px; /* Larger remove button */
+    }
+  
+    .search-button {
+      width: 120px; /* Increased width for search button */
+      font-size: 18px; /* Increased font size */
+    }
+  
+    .results-title {
+      font-size: 24px; /* Larger font size for results section */
+    }
+  
+    .result-item {
+      padding: 20px; /* More padding for larger screens */
+    }
+  
+    .result-label {
+      font-size: 18px; /* Larger font size for result labels */
+    }
   }
-}
+  
