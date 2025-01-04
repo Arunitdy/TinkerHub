@@ -42,7 +42,9 @@ const peopleData = [
         }
     }
 ];
-handleSearch() ;
+
+handleSearch();
+
 // Default Profile Image URL
 const defaultProfileImage = "https://e7.pngegg.com/pngimages/442/477/png-clipart-computer-icons-user-profile-avatar-profile-heroes-profile.png";
 
@@ -83,9 +85,20 @@ function viewProfile(personId) {
     
     if (person) {
         // Set the profile page with the person's details
-        window.location.href = `Profile/Profile.html?id=${person.id}`;
+        window.location.href = `profile.html?id=${person.id}`;
     }
 }
+
+// Toggle the sliding menu
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const menuButton = document.querySelector(".menu-toggle-button");
+    menu.classList.toggle("menu-open");
+    menuButton.classList.toggle("menu-toggle-button-close");
+}
+
+window.onload = generateRandomBlocks;
+
 
 // Generate random blocks (same as before)
 function generateRandomBlocks() {
@@ -105,5 +118,3 @@ function generateRandomBlocks() {
         blockContainer.appendChild(block);
     }
 }
-
-window.onload = generateRandomBlocks;
