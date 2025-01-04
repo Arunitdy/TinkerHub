@@ -308,7 +308,7 @@ body {
   color: red;
 }
 
-@media(max-width:800px){
+@media(min-width:800px){
   .app-container {
     margin: 10px;
     min-height: 100vh;
