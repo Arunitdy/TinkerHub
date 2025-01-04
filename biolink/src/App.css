@@ -1,11 +1,12 @@
 
 body {
-  margin: 0;
+  margin: 10px;
   font-family: 'Arial', sans-serif;
   background-color: #ffe4e6;
 }
 
 .app-container {
+  margin: 100px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,10 +27,9 @@ body {
   transition: background-color 0.3s;
 }
 .menu-toggle-button {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: none;
+  background: #f6f6f6;
+  color: #ffffff;
+  border: 1px solid #db2777;
   border: none;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,20 @@ body {
   gap: 4px;
   cursor: pointer;
 }
+.menu-toggle-button-close{
+  margin-top: 0px;
+  margin-left:auto;
+  background: #f6f6f6;
+  color: #ffffff;
+  border: 1px solid #db2777;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
 
+}
 .menu-toggle-button:focus {
   outline: none;
 }
@@ -55,7 +68,6 @@ body {
   background-color: #be185d; /* Darker pink on hover */
 }
 
-/* Close Icon */
 .close-icon {
   font-size: 24px;
   font-weight: bold;
@@ -64,12 +76,13 @@ body {
   transition: color 0.3s;
 }
 
-.menu-toggle-button:hover .close-icon {
+.menu-toggle-button:hover {
   color: #be185d; /* Darker pink on hover */
 }
 
 .menu-toggle-button:hover {
-  background-color: #db2777;
+  background-color: #ffffff;
+  color: #db2777;
 }
 
 /* Sliding Menu */
@@ -94,6 +107,7 @@ body {
 }
 
 .menu-title {
+  display: flex;
   font-size: 20px;
   font-weight: bold;
   color: #ec4899;
@@ -202,8 +216,9 @@ body {
 
 /* Search Button */
 .search-button {
-  width: 100%;
+  width: 100px;
   background-color: #ec4899;
+  margin-left:auto;
   color: white;
   padding: 10px;
   border: none;

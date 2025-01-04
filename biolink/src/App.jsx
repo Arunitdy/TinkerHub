@@ -69,33 +69,22 @@ const App = () => {
   return (
     <div className="app-container">
       {/* Top Menu Button */}
-      <button
-        onClick={toggleMenu}
-        className="menu-toggle-button"
-      >
-        Menu
+      <button  onClick={toggleMenu}  className="menu-toggle-button">
+        <>
+          <div className="menu-line"></div>
+          <div className="menu-line"></div>
+          <div className="menu-line"></div>
+        </>
       </button>
 
       {/* Sliding Menu */}
       <div className={`sliding-menu ${menuOpen ? "menu-open" : "menu-closed"}`}>
         <div className="menu-content">
-          <h2 className="menu-title">Menu</h2>
-          {/* Top Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className="menu-toggle-button"
-              aria-label={menuOpen ? "Close Menu" : "Open Menu"}
-            >
-              {!menuOpen ? (
-                <>
-                  <div className="menu-line"></div>
-                  <div className="menu-line"></div>
-                  <div className="menu-line"></div>
-                </>
-              ) : (
-                <div className="close-icon">&times;</div>
-              )}
-            </button>
+          <h2 className="menu-title">Menu {/* Top Menu Button */}
+            <button onClick={toggleMenu}  className="menu-toggle-button-close">
+               <div className="close-icon">&times;</div> 
+            </button></h2>
+         
 
           <ul className="menu-list">
             <li>
