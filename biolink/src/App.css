@@ -307,3 +307,12 @@ body {
 .login{
   color: red;
 }
+
+@media(max-width:800px){
+  .app-container {
+    margin: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
