@@ -310,78 +310,79 @@ body {
   color: red;
 }
 
-@media(min-width: 800px) {
-    .app-container {
-      margin: 0px;
-      padding:0px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .logo {
-      top: 20px; /* Adjusted to fit better on larger screens */
-      right: 40px;
-    }
-  
-    .logo h3 {
-      font-size: 26px; /* Increased font size for larger screens */
-      margin-top: 10px;
-    }
-  
-    .menu-toggle-button {
-      padding: 15px 25px; /* Increased padding for better appearance on larger screens */
-      font-size: 18px; /* Increased font size */
-    }
-  
-    .sliding-menu {
-      width: 300px; /* Increased width of the sliding menu for larger screens */
-    }
-  
-    .menu-title {
-      font-size: 24px; /* Increased font size */
-    }
-  
-    .menu-item {
-      font-size: 18px; /* Increased font size for larger screens */
-    }
-  
-    .search-title {
-      font-size: 20px; /* Larger font size */
-    }
-  
-    .search-input, .skill-input {
-      font-size: 16px; /* Larger font size for better visibility */
-    }
-  
-    .selected-skills-title {
-      font-size: 18px; /* Increased font size */
-    }
-  
-    .selected-skill-badge {
-      font-size: 16px; /* Increased font size */
-      padding: 8px 4px 8px 14px;
-    }
-  
-    .remove-skill-button {
-      font-size: 20px; /* Larger remove button */
-    }
-  
-    .search-button {
-      width: 120px; /* Increased width for search button */
-      font-size: 18px; /* Increased font size */
-    }
-  
-    .results-title {
-      font-size: 24px; /* Larger font size for results section */
-    }
-  
-    .result-item {
-      padding: 20px; /* More padding for larger screens */
-    }
-  
-    .result-label {
-      font-size: 18px; /* Larger font size for result labels */
-    }
+@media (max-width: 768px) {
+  .app-container {
+    margin: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
+
+  .logo {
+    top: 10px; /* Adjusted logo position for smaller screens */
+    right: 20px;
+  }
+
+  .logo h3 {
+    font-size: 20px; /* Reduced font size for mobile */
+    margin-top: 5px;
+  }
+
+  .menu-toggle-button {
+    padding: 12px 20px 12px 10px; /* Reduced padding for better fit */
+    font-size: 16px; /* Slightly smaller font size */
+  }
+
+  .sliding-menu {
+    width: 250px; /* Reduced width for smaller screens */
+  }
+
+  .menu-title {
+    font-size: 20px; /* Adjusted font size */
+  }
+
+  .menu-item {
+    font-size: 16px; /* Slightly smaller font size for mobile */
+  }
+
+  .search-title {
+    font-size: 18px; /* Slightly smaller font size */
+  }
+
+  .search-input, .skill-input {
+    padding: 6px -5px 6px 12px; 
+    font-size: 14px; /* Reduced font size for better readability on small screens */
+  }
+
+  .selected-skills-title {
+    font-size: 16px; /* Adjusted font size */
+  }
+
+  .selected-skill-badge {
+    font-size: 14px; /* Reduced font size */
+    padding: 6px 4px 6px 12px; /* Adjusted padding */
+  }
+
+  .remove-skill-button {
+    font-size: 18px; /* Slightly smaller font size for mobile */
+  }
+
+  .search-button {
+    width: 100px; /* Reduced width for mobile */
+    font-size: 16px; /* Adjusted font size */
+  }
+
+  .results-title {
+    font-size: 20px; /* Adjusted font size */
+  }
+
+  .result-item {
+    padding: 16px; /* Reduced padding for smaller screens */
+  }
+
+  .result-label {
+    font-size: 16px; /* Adjusted font size for mobile */
+  }
+}
+
   
