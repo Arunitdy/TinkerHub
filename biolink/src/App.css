@@ -11,7 +11,24 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.logo{
+  width: auto;
+  top:10px;
+  right: 20px;
+  position: absolute;
+  display: flex;
+  gap:10px;
+  padding: 1px;
+}
+.logo h3{
+  font-size:23px;
+  margin-top: 10px;
+  color: #505050;
+}
+.logo img{
+  width: 40px;
+  height: 40px;
+}
 /* Menu Button */
 .menu-toggle-button {
   position: absolute;
@@ -221,7 +238,7 @@ body {
   margin-left:auto;
   color: white;
   padding: 10px;
-  border: none;
+  border: 1px solid balck;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
@@ -229,7 +246,8 @@ body {
 }
 
 .search-button:hover {
-  background-color: black;
+  background-color: #fff;
+  color: black;
 }
 
 /* Results Section */

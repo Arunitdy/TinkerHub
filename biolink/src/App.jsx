@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import './App.css';
-
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [name, setName] = useState("");
   const [skillInput, setSkillInput] = useState("");
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [results, setResults] = useState([]);
+  const [blocks, setBlocks] = useState([]);
 
   const allSkills = [
     "React",
@@ -66,8 +66,52 @@ const App = () => {
     setResults(filteredResults);
   };
 
+   // Function to generate random blocks
+  const generateRandomBlocks = () => {
+    const newBlocks = [];
+    for (let i = 0; i < 10; i++) {
+      newBlocks.push({
+        id: i,
+        left: Math.floor(Math.random() * window.innerWidth) + "px",  // Random left position
+        top: Math.floor(Math.random() * window.innerHeight) + "px", // Random top position
+        backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`, // Random color
+        width: "10px",  // Fixed width of 2px
+        height: `10px`,
+        zIndex: "-99",  // Random height between 10px and 60px
+        rotate: `${Math.floor(Math.random() * 360)}deg`,
+      });
+    }
+    setBlocks(newBlocks);
+  };
+
+  useEffect(() => {
+    generateRandomBlocks();
+  }, []);
+
   return (
     <div className="app-container">
+      {/* tinker Hub logo */}
+      <div className="logo"><h3>Tinker Hub</h3>
+      <img src="./public/TinkerHub.png"/></div>
+       {/* Random color blocks  */}
+      <div className="color-block">
+        {blocks.map((block) => (
+          <div
+            key={block.id}
+            className="random-block"
+            style={{
+              position: "absolute",
+              left: block.left,
+              top: block.top,
+              backgroundColor: block.backgroundColor,
+              width: block.width,
+              height: block.height,
+              zIndex: -99,
+              transform: `rotate(${block.rotate})`, // Apply the random rotation
+            }}
+          ></div>
+        ))}
+      </div>
       {/* Top Menu Button */}
       <button  onClick={toggleMenu}  className="menu-toggle-button">
         <>
