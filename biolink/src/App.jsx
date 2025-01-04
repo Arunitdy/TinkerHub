@@ -77,11 +77,25 @@ const App = () => {
       </button>
 
       {/* Sliding Menu */}
-      <div
-        className={`sliding-menu ${menuOpen ? "menu-open" : "menu-closed"}`}
-      >
+      <div className={`sliding-menu ${menuOpen ? "menu-open" : "menu-closed"}`}>
         <div className="menu-content">
           <h2 className="menu-title">Menu</h2>
+          {/* Top Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className="menu-toggle-button"
+              aria-label={menuOpen ? "Close Menu" : "Open Menu"}
+            >
+              {!menuOpen ? (
+                <>
+                  <div className="menu-line"></div>
+                  <div className="menu-line"></div>
+                  <div className="menu-line"></div>
+                </>
+              ) : (
+                <div className="close-icon">&times;</div>
+              )}
+            </button>
 
           <ul className="menu-list">
             <li>
@@ -97,62 +111,62 @@ const App = () => {
 
           <hr className="menu-divider" />
 
+        </div>
+      </div>
+              
           <h2 className="search-title">Search People</h2>
 
-          <input
-            type="text"
-            placeholder="Enter name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="search-input"
-          />
+        <input
+          type="text"
+          placeholder="Enter name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="search-input"
+        />
 
-          <input
-            type="text"
-            placeholder="Enter skill"
-            value={skillInput}
-            onChange={handleSkillInputChange}
-            className="skill-input"
-          />
+        <input
+          type="text"
+          placeholder="Enter skill"
+          value={skillInput}
+          onChange={handleSkillInputChange}
+          className="skill-input"
+        />
 
-          {/* Dropdown for skills */}
-          {skillInput && (
-            <ul className="skill-dropdown">
-              {filteredSkills.map((skill) => (
-                <li
-                  key={skill}
-                  onClick={() => handleAddSkill(skill)}
-                  className="skill-dropdown-item"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          )}
+        {/* Dropdown for skills */}
+        {skillInput && (
+          <ul className="skill-dropdown">
+            {filteredSkills.map((skill) => (
+              <li
+                key={skill}
+                onClick={() => handleAddSkill(skill)}
+                className="skill-dropdown-item"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        )}
 
-          <div className="selected-skills-container">
-            <h3 className="selected-skills-title">Selected Skills:</h3>
-            <div className="selected-skills">
-              {selectedSkills.map((skill) => (
-                <span
-                  key={skill}
-                  className="selected-skill-badge"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <button
-            onClick={handleSearch}
-            className="search-button"
-          >
-            Search
-          </button>
+      <div className="selected-skills-container">
+        <h3 className="selected-skills-title">Selected Skills:</h3>
+        <div className="selected-skills">
+          {selectedSkills.map((skill) => (
+            <span
+              key={skill}
+              className="selected-skill-badge"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
 
+      <button
+        onClick={handleSearch}
+        className="search-button"
+      >
+        Search
+      </button>
       {/* Results */}
       <div className="results-container">
         <h2 className="results-title">Results</h2>
