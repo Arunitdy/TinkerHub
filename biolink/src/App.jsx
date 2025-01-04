@@ -1,5 +1,6 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
+
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [name, setName] = useState("");
@@ -55,6 +56,10 @@ const App = () => {
     setFilteredSkills(allSkills);
   };
 
+  const handleRemoveSkill = (skillToRemove) => {
+    setSelectedSkills(selectedSkills.filter((skill) => skill !== skillToRemove));
+  };
+
   const handleSearch = () => {
     const filteredResults = peopleData.filter((person) => {
       const matchesName = name ? person.name.toLowerCase().includes(name.toLowerCase()) : true;
@@ -66,7 +71,7 @@ const App = () => {
     setResults(filteredResults);
   };
 
-   // Function to generate random blocks
+  // Function to generate random blocks
   const generateRandomBlocks = () => {
     const newBlocks = [];
     for (let i = 0; i < 10; i++) {
@@ -90,10 +95,13 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {/* tinker Hub logo */}
-      <div className="logo"><h3>Tinker Hub</h3>
-      <img src="./public/TinkerHub.png"/></div>
-       {/* Random color blocks  */}
+      {/* Tinker Hub logo */}
+      <div className="logo">
+        <h3>Tinker Hub</h3>
+        <img src="./public/TinkerHub.png" alt="Tinker Hub Logo" />
+      </div>
+
+      {/* Random color blocks */}
       <div className="color-block">
         {blocks.map((block) => (
           <div
@@ -112,8 +120,9 @@ const App = () => {
           ></div>
         ))}
       </div>
+
       {/* Top Menu Button */}
-      <button  onClick={toggleMenu}  className="menu-toggle-button">
+      <button onClick={toggleMenu} className="menu-toggle-button">
         <>
           <div className="menu-line"></div>
           <div className="menu-line"></div>
@@ -124,16 +133,18 @@ const App = () => {
       {/* Sliding Menu */}
       <div className={`sliding-menu ${menuOpen ? "menu-open" : "menu-closed"}`}>
         <div className="menu-content">
-          <h2 className="menu-title">Menu {/* Top Menu Button */}
-            <button onClick={toggleMenu}  className="menu-toggle-button-close">
-               <div className="close-icon">&times;</div> 
-            </button></h2>
-         
+          <h2 className="menu-title">
+            Menu
+            <button onClick={toggleMenu} className="menu-toggle-button-close">
+              <div className="close-icon">&times;</div>
+            </button>
+          </h2>
+
           <ul className="menu-list">
             <li>
               <button className="menu-item">Profile</button>
             </li>
-            
+
             <li>
               <button className="menu-item">Settings</button>
             </li>
@@ -143,73 +154,70 @@ const App = () => {
           </ul>
 
           <hr className="menu-divider" />
-
         </div>
       </div>
-              
-          <h2 className="search-title">Search People</h2>
 
-        <input
-          type="text"
-          placeholder="Enter name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="search-input"
-        />
+      <h2 className="search-title">Search People</h2>
 
-        <input
-          type="text"
-          placeholder="Enter skill"
-          value={skillInput}
-          onChange={handleSkillInputChange}
-          className="skill-input"
-        />
+      <input
+        type="text"
+        placeholder="Enter name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="search-input"
+      />
 
-        {/* Dropdown for skills */}
-        {skillInput && (
-          <ul className="skill-dropdown">
-            {filteredSkills.map((skill) => (
-              <li
-                key={skill}
-                onClick={() => handleAddSkill(skill)}
-                className="skill-dropdown-item"
-              >
-                {skill}
-              </li>
-            ))}
-          </ul>
-        )}
+      <input
+        type="text"
+        placeholder="Enter skill"
+        value={skillInput}
+        onChange={handleSkillInputChange}
+        className="skill-input"
+      />
+
+      {/* Dropdown for skills */}
+      {skillInput && (
+        <ul className="skill-dropdown">
+          {filteredSkills.map((skill) => (
+            <li
+              key={skill}
+              onClick={() => handleAddSkill(skill)}
+              className="skill-dropdown-item"
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+      )}
 
       <div className="selected-skills-container">
         <h3 className="selected-skills-title">Selected Skills:</h3>
         <div className="selected-skills">
           {selectedSkills.map((skill) => (
-            <span
-              key={skill}
-              className="selected-skill-badge"
-            >
+            <span key={skill} className="selected-skill-badge">
               {skill}
+              <button
+                onClick={() => handleRemoveSkill(skill)}
+                className="remove-skill-button"
+              >
+                &times;
+              </button>
             </span>
           ))}
         </div>
       </div>
 
-      <button
-        onClick={handleSearch}
-        className="search-button"
-      >
+      <button onClick={handleSearch} className="search-button">
         Search
       </button>
+
       {/* Results */}
       <div className="results-container">
         <h2 className="results-title">Results</h2>
         {results.length > 0 ? (
           <ul className="results-list">
             {results.map((person) => (
-              <li
-                key={person.id}
-                className="result-item"
-              >
+              <li key={person.id} className="result-item">
                 <p>
                   <strong className="result-label">Name:</strong> {person.name}
                 </p>

@@ -224,11 +224,26 @@ body {
 }
 
 .selected-skill-badge {
-  background-color: #ffe4e6;
+  background-color: #dfdfdf;
   color: black;
-  padding: 6px 12px;
+  padding: 6px 3px 6px 12px;
   font-size: 14px;
   border-radius: 16px;
+  border: 1.99px solid rgb(10, 0, 0);
+}
+.selected-skill-badge:hover{
+  background:white;
+  transform: scale(1.1)  ;
+}
+.remove-skill-button {
+  font-size: 18px;
+  border: none;
+  cursor:pointer;
+  background-color: transparent;
+  margin-left:10px;
+}
+.remove-skill-button:hover{
+  transform: scale(1.1);
 }
 
 /* Search Button */
