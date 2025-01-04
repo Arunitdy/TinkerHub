@@ -129,16 +129,16 @@ const App = () => {
                <div className="close-icon">&times;</div> 
             </button></h2>
          
-
           <ul className="menu-list">
             <li>
               <button className="menu-item">Profile</button>
             </li>
-            <li>
-              <button className="menu-item">Login</button>
-            </li>
+            
             <li>
               <button className="menu-item">Settings</button>
+            </li>
+            <li>
+              <button className="menu-item login">Login</button>
             </li>
           </ul>
 
