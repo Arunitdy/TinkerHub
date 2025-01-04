@@ -1,0 +1,171 @@
+/* General body and layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Menu button */
+button {
+  cursor: pointer;
+}
+
+.menu-button {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #0056b3;
+}
+
+/* Sliding menu */
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.sliding-menu.open {
+  transform: translateX(0);
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.menu-content h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #333;
+}
+
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-content li {
+  margin-bottom: 12px;
+}
+
+.menu-content button {
+  width: 100%;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.menu-content button:hover {
+  background-color: #e9ecef;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Skill dropdown */
+.skill-dropdown {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.skill-dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.skill-dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Selected skills badges */
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.selected-skill {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Search button */
+.search-button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Results section */
+.results {
+  padding: 20px;
+}
+
+.results h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.result-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.result-item strong {
+  color: #007bff;
+}
