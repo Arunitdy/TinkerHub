@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="index.css" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="./public/TinkerHub.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinker Hub</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="logo">
+        <h3>Tinker Hub</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXFgk4myswk6OhVHe7g7YVUlR7RD-ERO2OHw&s" alt="Tinker Hub Logo">
+        </div>
+
+        <div class="color-block" id="colorBlock"></div>
+
+        <button class="menu-toggle-button" onclick="toggleMenu()">
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        </button>
+
+        <div id="menu" class="sliding-menu menu-closed">
+        <div class="menu-content">
+            <h2 class="menu-title">
+            Menu
+            <button onclick="toggleMenu()" class="menu-toggle-button-close">
+                <div class="close-icon">&times;</div>
+            </button>
+            </h2>
+            <ul class="menu-list">
+            <li><button class="menu-item">Profile</button></li>
+            <li><button class="menu-item">Settings</button></li>
+            <li><button class="menu-item login">Login</button></li>
+            </ul>
+            <hr class="menu-divider">
+        </div>
+        </div>
+
+        <h2 class="search-title">Search People</h2>
+
+        <input type="text" id="nameInput" placeholder="Enter name" class="search-input">
+        <input type="text" id="skillInput" placeholder="Enter skill" class="skill-input" oninput="handleSkillInputChange()">
+
+        <ul id="skillDropdown" class="skill-dropdown"></ul>
+
+        <div class="selected-skills-container">
+        <h3 class="selected-skills-title">Selected Skills:</h3>
+        <div id="selectedSkills" class="selected-skills"></div>
+        </div>
+
+        <button onclick="handleSearch()" class="search-button">Search</button>
+
+        <div class="results-container">
+        <h2 class="results-title">Results</h2>
+        <ul id="resultsList" class="results-list"></ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
