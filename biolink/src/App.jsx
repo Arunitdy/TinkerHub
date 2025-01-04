@@ -98,7 +98,7 @@ const App = () => {
       {/* Tinker Hub logo */}
       <div className="logo">
         <h3>Tinker Hub</h3>
-        <img src="./public/TinkerHub.png" alt="Tinker Hub Logo" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXFgk4myswk6OhVHe7g7YVUlR7RD-ERO2OHw&s" alt="Tinker Hub Logo" />
       </div>
 
       {/* Random color blocks */}

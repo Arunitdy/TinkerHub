@@ -28,6 +28,7 @@ body {
 .logo img{
   width: 40px;
   height: 40px;
+  border-radius: 7px;
 }
 /* Menu Button */
 .menu-toggle-button {
@@ -310,8 +311,8 @@ body {
 
 @media(min-width: 800px) {
     .app-container {
-      margin: 20px; /* Adjusted margin to ensure it's not too wide */
-      min-height: 100vh; /* Ensures it takes up the full viewport height */
+      margin: 20px;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
