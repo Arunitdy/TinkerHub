@@ -1,0 +1,100 @@
+* {
+    font-family: Courier, monospace;
+}
+
+body {
+    margin: 10px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f6fb;
+}
+
+.profile-container {
+    margin: 10px;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.profile-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.profile-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-details li {
+    margin: 10px 0;
+}
+
+#colorBlock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.menu-toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-item {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.sliding-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: transform 0.3s ease;
+    transform: translateX(-250px);
+}
+
+.menu-open {
+    transform: translateX(0);
+}
+
+.menu-closed {
+    transform: translateX(-250px);
+}
+.social {
+    display: flex;
+    gap: 15px; /* Adjust space between icons */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social img {
+    width: 35px; /* Adjust icon size */
+    height: 35px;
+    border-radius: 50%; /* Make icons circular */
+    transition: transform 0.3s ease;
+  }
+  
+  .social img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  .fa {
+    margin: 0;
+  }
+  

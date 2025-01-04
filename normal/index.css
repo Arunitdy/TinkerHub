@@ -1,3 +1,7 @@
+* {
+  font-family: Courier, monospace;
+}
+
 body {
     margin: 10px;
     font-family: 'Arial', sans-serif;
