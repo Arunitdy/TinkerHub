@@ -2,6 +2,9 @@
     font-family: Courier, monospace;
 }
 
+.link{
+    cursor:pointer;
+}
 body {
     margin: 10px;
     font-family: 'Arial', sans-serif;
