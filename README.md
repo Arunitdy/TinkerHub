@@ -16,7 +16,8 @@ Venue: Campus Premises(anywhere!)
 Of course, the free registrations, cozy evenings and refreshments. Six teams only!!
 
 Tell us about yourself, your preferred tech stack, and more here:
-<a src="https://dub.sh/protocol10">register</a>
+
+<a href="https://dub.sh/protocol10">register</a>
 
 Also get free tickets on the hub app!
 
