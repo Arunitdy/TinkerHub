@@ -4,6 +4,7 @@ console.log("start of index.js");
 const defaultProfileImage = "https://e7.pngegg.com/pngimages/442/477/png-clipart-computer-icons-user-profile-avatar-profile-heroes-profile.png";
 
 // People Data
+
 const peopleData = [
     { 
         id: 1, 
@@ -105,24 +106,34 @@ function toggleMenu() {
     menuButton.classList.toggle("menu-toggle-button-close");
 }
 
-// Generate random blocks
+//color block
 function generateRandomBlocks() {
     const blockContainer = document.getElementById("colorBlock");
+
+    // Clear existing blocks
     blockContainer.innerHTML = "";
+
+    const blockSize = 10; // Size of each block (width and height)
+
     for (let i = 0; i < 10; i++) {
         const block = document.createElement("div");
         block.className = "random-block";
         block.style.position = "absolute";
-        block.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-        block.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+
+        // Set random positions within the visible area, considering the block size
+        block.style.left = Math.floor(Math.random() * (window.innerWidth - blockSize)) + "px";
+        block.style.top = Math.floor(Math.random() * (window.innerHeight - blockSize)) + "px";
+
         block.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-        block.style.width = "10px";
-        block.style.height = "10px";
+        block.style.width = blockSize + "px";
+        block.style.height = blockSize + "px";
         block.style.zIndex = "-99";
         block.style.transform = `rotate(${Math.floor(Math.random() * 360)}deg)`;
+
         blockContainer.appendChild(block);
     }
 }
+
 
 // Event listeners
 window.onload = () => {
