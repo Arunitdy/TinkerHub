@@ -1,5 +1,5 @@
 # TinkerHub
-<img src="./normal/project.png" width=500 alt="home gui">
+<img src="./normal/project.jpg" width=500 alt="home gui">
 
 Protocol 10, a 7-day project-making experience where you'll collaborate, learn, and make as a team and guess what, we got our mentor to work with you <3 n guess what you'll make
 
