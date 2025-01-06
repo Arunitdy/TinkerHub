@@ -38,8 +38,10 @@ body {
 }
 
 .profile-header img {
-    border-radius: 50%;
+    border-radius: 10px;
+    border:2px solid rgb(91, 88, 88);
     max-width: 150px;
+    object-fit: cover;
 }
 
 .profile-details {

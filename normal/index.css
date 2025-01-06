@@ -97,7 +97,7 @@ body {
 }
 #searchButton{
   width:80px;
-  padding: 5px;
+  padding: 8px ;
   border-radius:8px;
   border:1px solid rgb(168, 168, 168);
   background: black;
@@ -108,7 +108,7 @@ body {
 #searchButton:hover{
   background: rgb(255, 248, 248);
   color: rgb(0, 0, 0);
-  border:1px solid rgb(168, 168, 168);
+  border:1.5px solid rgb(0, 0, 0);
 }
 #searchButton:active{
   transform:scale(1.1);
@@ -117,8 +117,8 @@ body {
     color: #000000;
     background-color: #ffffff;
 }
-  
-/* Sliding Menu */
+  /*
+// Sliding Menu 
 .sliding-menu {
     position: fixed;
     top: 0;
@@ -174,7 +174,7 @@ body {
     border: 1px solid #000000;
     margin: 16px 0;
 }
-  
+  */
 /* Search Section */
 .search-title {
     font-size: 18px;

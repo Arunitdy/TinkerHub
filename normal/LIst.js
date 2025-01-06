@@ -1,3 +1,7 @@
+// Default Profile Image URL
+
+const defaultProfileImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfaPyeDyTpc2U7lR96etWzLQU5s77awUPs1Zt17g8LwWLs9vzTmIxlgYHLdpDYRK9Mxj8&usqp=CAU";
+
 // People Data
 
 const peopleData = [
@@ -29,7 +33,7 @@ const peopleData = [
         id: 3, 
         name: "Charlie", 
         skills: ["Python", "Django"],
-        profileImage: "https://via.placeholder.com/150",
+        profileImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxro3rG1xAqRKpIrZyuzGIQqUEvEtRU_XSyA&s",
         socialMedia: {
             facebook: "https://facebook.com/charlie",
             instagram: "https://instagram.com/charlie",

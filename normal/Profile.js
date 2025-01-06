@@ -1,7 +1,5 @@
 console.log("start of profile.js");
 
-// Default Profile Image URL
-const defaultProfileImage = "https://e7.pngegg.com/pngimages/442/477/png-clipart-computer-icons-user-profile-avatar-profile-heroes-profile.png";
 
 
 // Load profile details
