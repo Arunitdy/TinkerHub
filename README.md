@@ -1,5 +1,5 @@
 # TinkerHub
-<img src="./normal/home.png" alt="home gui">
+<img src="./normal/home.png" width:500px; alt="home gui">
 
 
 Profile Page Project
