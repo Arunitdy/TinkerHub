@@ -95,7 +95,24 @@ body {
     line-height: 1;
     transition: color 0.3s;
 }
-  
+#searchButton{
+  width:80px;
+  padding: 5px;
+  border-radius:8px;
+  border:1px solid rgb(168, 168, 168);
+  background: black;
+  color: white;
+  cursor:pointer;
+  margin-left:auto;
+}
+#searchButton:hover{
+  background: rgb(255, 248, 248);
+  color: rgb(0, 0, 0);
+  border:1px solid rgb(168, 168, 168);
+}
+#searchButton:active{
+  transform:scale(1.1);
+}
 .menu-toggle-button:hover {
     color: #000000;
     background-color: #ffffff;
@@ -208,6 +225,7 @@ body {
     border: 1px solid #000000;
     border-radius: 8px;
     margin-bottom: 8px;
+    cursor:pointer;
     transition: box-shadow 0.3s;
 }
   
