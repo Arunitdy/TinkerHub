@@ -226,9 +226,17 @@ body {
     border-radius: 8px;
     margin-bottom: 8px;
     cursor:pointer;
+    display: flex;
     transition: box-shadow 0.3s;
 }
-  
+.profileImg{
+  width:100px;
+  border: 1px solid rgb(36, 35, 35);
+  border-radius: 10px;
+  margin:5px 10px 5px 5px;
+  height: 100px;
+  object-fit: cover;
+}
 .result-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

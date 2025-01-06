@@ -1,60 +1,7 @@
 console.log("start of index.js");
 
 // Default Profile Image URL
-const defaultProfileImage = "https://e7.pngegg.com/pngimages/442/477/png-clipart-computer-icons-user-profile-avatar-profile-heroes-profile.png";
-
-// People Data
-
-const peopleData = [
-    { 
-        id: 1, 
-        name: "Alice", 
-        skills: ["React", "Node.js"],
-        profileImage: "https://via.placeholder.com/150",
-        socialMedia: {
-            facebook: "https://facebook.com/alice",
-            instagram: "https://instagram.com/alice",
-            linkedin: "https://linkedin.com/in/alice",
-            youtube: "https://youtube.com/alice"
-        }
-    },
-    { 
-        id: 2, 
-        name: "Bob", 
-        skills: ["Java", "Spring Boot"],
-        profileImage: "",
-        socialMedia: {
-            facebook: "https://facebook.com/bob",
-            instagram: "https://instagram.com/bob",
-            linkedin: "https://linkedin.com/in/bob",
-            youtube: "https://youtube.com/bob"
-        }
-    },
-    { 
-        id: 3, 
-        name: "Charlie", 
-        skills: ["Python", "Django"],
-        profileImage: "https://via.placeholder.com/150",
-        socialMedia: {
-            facebook: "https://facebook.com/charlie",
-            instagram: "https://instagram.com/charlie",
-            linkedin: "https://linkedin.com/in/charlie",
-            youtube: "https://youtube.com/charlie"
-        }
-    },
-    { 
-        id: 4, 
-        name: "Diana", 
-        skills: ["React", "JavaScript"],
-        profileImage: "",
-        socialMedia: {
-            facebook: "https://facebook.com/diana",
-            instagram: "https://instagram.com/diana",
-            linkedin: "https://linkedin.com/in/diana",
-            youtube: "https://youtube.com/diana"
-        }
-    }
-];
+const defaultProfileImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfaPyeDyTpc2U7lR96etWzLQU5s77awUPs1Zt17g8LwWLs9vzTmIxlgYHLdpDYRK9Mxj8&usqp=CAU";
 
 // Handle search function
 function handleSearch() {
@@ -70,8 +17,14 @@ function handleSearch() {
     if (filteredResults.length > 0) {
         filteredResults.forEach(person => {
             const li = document.createElement("li");
+            let img=(person.profileImage)?person.profileImage:defaultProfileImage;
+            console.log(img)
             li.className = "result-item";
-            li.innerHTML = `<p><strong>Name:</strong> ${person.name}</p><p><strong>Skills:</strong> ${person.skills.join(", ")}</p>`;
+            li.innerHTML = `<img  class="profileImg" src="${img}" atl="profile img of ${person.name}">
+                            <div class="details">
+                                <p><strong>Name:</strong> ${person.name}</p>
+                                <p><strong>Skills:</strong> ${person.skills.join(", ")}</p>
+                            </div>`;
             li.onclick = () => viewProfile(person.id);
             resultsList.appendChild(li);
         });
@@ -98,6 +51,7 @@ function viewProfile(personId) {
     }
 }
 
+/*
 // Toggle the sliding menu
 function toggleMenu() {
     const menu = document.getElementById("menu");
@@ -105,6 +59,7 @@ function toggleMenu() {
     menu.classList.toggle("menu-open");
     menuButton.classList.toggle("menu-toggle-button-close");
 }
+*/
 
 //color block
 function generateRandomBlocks() {
