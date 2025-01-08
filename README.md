@@ -24,7 +24,7 @@ Also get free tickets on the hub app!
 
 <img src="./normal/home.png" width=500 alt="home gui">
 
-link:<a href="https://tinker-hub-r2ob.vercel.app/">Click me </a>
+link (React):<a href="https://tinker-hub-r2ob.vercel.app/">Click me </a>
 
 
 link normal:<a href="https://tinker-hub.vercel.app/">click</a>
